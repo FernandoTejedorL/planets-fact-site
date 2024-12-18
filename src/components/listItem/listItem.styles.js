@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { FONT_SIZE, LETTER_SPACING, LINE_HEIGHT } from '../../styles/fonts';
 import { COLORS } from '../../styles/colors';
-import { Link } from 'react-router-dom';
 
 const StyledListItemContainer = styled.div`
 	display: flex;

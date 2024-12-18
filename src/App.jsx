@@ -2,12 +2,14 @@ import { BrowserRouter } from 'react-router-dom';
 import Router from './router/Router';
 import { GlobalStyles } from './styles/GlobalStyles';
 import Header from './components/header/Header';
+import { useState } from 'react';
 
 const App = () => {
+	const [showMenu, setShowMenu] = useState(false);
 	return (
 		<BrowserRouter>
 			<GlobalStyles />
-			<Header />
+			<Header showMenu={showMenu} setShowMenu={setShowMenu} />
 			<Router />
 		</BrowserRouter>
 	);

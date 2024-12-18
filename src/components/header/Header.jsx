@@ -1,12 +1,17 @@
 import Menu from '../menu/Menu';
+import { StyledHeader, StyledLogo } from './header.styles';
 
-const Header = () => {
+const Header = ({ setShowMenu, showMenu }) => {
 	return (
-		<div>
-			<h1>THE PLANETS</h1>
-			<Menu />
-			<img src='/assets/images/icon-hamburger.svg' alt='hamburgericon' />
-		</div>
+		<StyledHeader>
+			<StyledLogo>THE PLANETS</StyledLogo>
+			<Menu showMenu={showMenu} />
+			<img
+				onClick={() => setShowMenu(!showMenu)}
+				src='/assets/images/icon-hamburger.svg'
+				alt='hamburgericon'
+			/>
+		</StyledHeader>
 	);
 };
 export default Header;

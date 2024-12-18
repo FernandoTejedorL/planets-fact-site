@@ -1,35 +1,16 @@
-import { NavLink } from 'react-router-dom';
+import { PLANETS_INFO } from '../../constants/planets-info';
+import ListItem from '../listItem/ListItem';
+import { StyledMenu } from './menu.styles';
 
-const Menu = () => {
+const Menu = ({ showMenu }) => {
 	return (
-		<nav>
+		<StyledMenu $showMenu={showMenu}>
 			<ul>
-				<li>
-					<NavLink>Mercury</NavLink>
-				</li>
-				<li>
-					<NavLink>Venus</NavLink>
-				</li>
-				<li>
-					<NavLink>Earth</NavLink>
-				</li>
-				<li>
-					<NavLink>Mars</NavLink>
-				</li>
-				<li>
-					<NavLink>Jupiter</NavLink>
-				</li>
-				<li>
-					<NavLink>Saturn</NavLink>
-				</li>
-				<li>
-					<NavLink>Uranus</NavLink>
-				</li>
-				<li>
-					<NavLink>Neptune</NavLink>
-				</li>
+				{PLANETS_INFO.map(planet => (
+					<ListItem key={planet.id} {...planet} />
+				))}
 			</ul>
-		</nav>
+		</StyledMenu>
 	);
 };
 

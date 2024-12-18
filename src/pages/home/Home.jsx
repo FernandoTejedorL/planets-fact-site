@@ -1,13 +1,8 @@
 const Home = () => {
 	return (
 		<>
-			<h1>HOME</h1>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-				pariatur minus laboriosam! Debitis explicabo et dolores. Nisi ab itaque
-				totam accusamus debitis, voluptates quaerat quam earum delectus ipsum
-				temporibus ad.
-			</p>
+			<h2>Welcome to the Solar System</h2>
+			<img src='/assets/images/solar marvel.png' alt='' />
 		</>
 	);
 };

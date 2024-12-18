@@ -1,4 +1,4 @@
-const About = () => {
+const Planet = () => {
 	return (
 		<>
 			<h1>ABOUT</h1>
@@ -11,4 +11,4 @@ const About = () => {
 		</>
 	);
 };
-export default About;
+export default Planet;

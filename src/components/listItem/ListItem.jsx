@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
 	StyledListItem,
 	StyledListItemContainer,
@@ -12,7 +12,9 @@ const ListItem = ({ name, color }) => {
 			<StyledNameAndColor>
 				<StyledListItemDeco $color={color} />
 				<StyledListItem>
-					<Link to={`/planet/${name.toLowerCase()}`}>{name.toUpperCase()}</Link>
+					<NavLink to={`/planet/${name.toLowerCase()}`}>
+						{name.toUpperCase()}
+					</NavLink>
 				</StyledListItem>
 			</StyledNameAndColor>
 			<img src='/assets/images/icon-chevron.svg' alt='' />

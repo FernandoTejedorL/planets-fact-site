@@ -11,6 +11,7 @@ const StyledMenu = styled.nav`
 	width: 100vw;
 	padding-inline: 1.5rem;
 	background-color: ${COLORS.dark};
+	z-index: 1;
 
 	/* @media screen and (width>=768px) {
 		position: relative;

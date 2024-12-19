@@ -8,7 +8,6 @@ const StyledHome = styled.div`
 	justify-content: center;
 	gap: 1.5rem;
 	height: 100vh;
-	width: 100vw;
 	padding-inline: 1.5rem;
 
 	@media screen and (width>=768px) {

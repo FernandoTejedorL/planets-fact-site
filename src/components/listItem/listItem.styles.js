@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import { FONT_SIZE, LETTER_SPACING, LINE_HEIGHT } from '../../styles/fonts';
 import { COLORS } from '../../styles/colors';
 
-const StyledListItemContainer = styled.div`
+const StyledDivLi = styled.div`
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
-	background-color: ${COLORS.dark};
+	align-items: center;
+	width: 90vw;
 	border-bottom: 0.0625rem solid ${COLORS.transparentWhite};
 `;
 
@@ -29,9 +29,4 @@ const StyledListItemDeco = styled.div`
 	background-color: ${({ $color }) => $color};
 `;
 
-export {
-	StyledListItemContainer,
-	StyledNameAndColor,
-	StyledListItem,
-	StyledListItemDeco
-};
+export { StyledDivLi, StyledNameAndColor, StyledListItem, StyledListItemDeco };

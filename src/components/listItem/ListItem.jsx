@@ -1,24 +1,27 @@
 import { NavLink } from 'react-router-dom';
 import {
+	StyledDivLi,
 	StyledListItem,
-	StyledListItemContainer,
 	StyledListItemDeco,
 	StyledNameAndColor
 } from './listItem.styles';
 
-const ListItem = ({ name, color }) => {
+const ListItem = ({ name, color, setShowMenu }) => {
 	return (
-		<StyledListItemContainer>
+		<StyledDivLi>
 			<StyledNameAndColor>
 				<StyledListItemDeco $color={color} />
 				<StyledListItem>
-					<NavLink to={`/planet/${name.toLowerCase()}`}>
+					<NavLink
+						onClick={() => setShowMenu(false)}
+						to={`/planet/${name.toLowerCase()}`}
+					>
 						{name.toUpperCase()}
 					</NavLink>
 				</StyledListItem>
 			</StyledNameAndColor>
 			<img src='/assets/images/icon-chevron.svg' alt='' />
-		</StyledListItemContainer>
+		</StyledDivLi>
 	);
 };
 export default ListItem;

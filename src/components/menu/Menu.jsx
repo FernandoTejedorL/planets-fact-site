@@ -1,16 +1,25 @@
+import { useState } from 'react';
 import { PLANETS_INFO } from '../../constants/planets-info';
 import ListItem from '../listItem/ListItem';
-import { StyledMenu } from './menu.styles';
+import { StyledListItemContainer, StyledMenu } from './menu.styles';
 
-const Menu = ({ showMenu }) => {
+const Menu = () => {
+	const [showMenu, setShowMenu] = useState(false);
 	return (
-		<StyledMenu $showMenu={showMenu}>
-			<ul>
-				{PLANETS_INFO.map(planet => (
-					<ListItem key={planet.id} {...planet} />
-				))}
-			</ul>
-		</StyledMenu>
+		<>
+			<StyledMenu $showMenu={showMenu}>
+				<StyledListItemContainer>
+					{PLANETS_INFO.map(planet => (
+						<ListItem key={planet.id} {...planet} setShowMenu={setShowMenu} />
+					))}
+				</StyledListItemContainer>
+			</StyledMenu>
+			<img
+				onClick={() => setShowMenu(!showMenu)}
+				src='/assets/images/icon-hamburger.svg'
+				alt='hamburgericon'
+			/>
+		</>
 	);
 };
 

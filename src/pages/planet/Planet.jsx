@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
 import Counter from '../../components/counter/Counter';
+import { PLANETS_INFO } from '../../constants/planets-info';
 import {
 	StiledSourceDiv,
 	StyledButton,
@@ -15,14 +15,12 @@ import {
 	StyledPlanetSecondary,
 	StyledSource
 } from './planet.styles';
-import { PLANETS_INFO } from '../../constants/planets-info';
+import Header from '../../components/header/Header';
 
-const Planet = () => {
+const Planet = ({ planetName }) => {
 	const [viewShown, setViewShown] = useState('overview');
-	console.log(PLANETS_INFO);
-	const { planetName } = useParams();
 	const planet = PLANETS_INFO.find(
-		planet => planet.name.toLowerCase() === planetName.toLowerCase()
+		planet => planet.name.toLowerCase() === planetName
 	);
 	let images = '';
 	let description = '';
@@ -43,7 +41,8 @@ const Planet = () => {
 		source = planet.geologySource;
 	}
 	return (
-		<div>
+		<>
+			<Header />
 			<StyledButtonsContainer>
 				<StyledButton onClick={() => setViewShown('overview')}>
 					OVERVIEW
@@ -76,7 +75,7 @@ const Planet = () => {
 					<Counter topic={'AVERAGE TEMP.'} magnitude={planet.temperature} />
 				</StyledCounterContainer>
 			</StyledDetailsContainer>
-		</div>
+		</>
 	);
 };
 

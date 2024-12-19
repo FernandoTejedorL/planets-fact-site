@@ -10,6 +10,11 @@ const StyledHome = styled.div`
 	height: 100vh;
 	width: 100vw;
 	padding-inline: 1.5rem;
+
+	@media screen and (width>=768px) {
+		justify-content: flex-start;
+		padding: 5%;
+	}
 `;
 
 const StyledHomeText = styled.h2`
@@ -23,6 +28,11 @@ const StyledImageSolar = styled.img`
 	height: 12.5rem;
 	width: 12.5rem;
 	border-radius: 1.25rem;
+
+	@media screen and (width>=768px) {
+		height: 20rem;
+		width: 20rem;
+	}
 `;
 
 export { StyledHome, StyledHomeText, StyledImageSolar };

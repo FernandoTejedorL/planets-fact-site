@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import {
+	StyledChevron,
 	StyledDivLi,
 	StyledListItem,
 	StyledListItemDeco,
@@ -20,7 +21,7 @@ const ListItem = ({ name, color, setShowMenu }) => {
 					</NavLink>
 				</StyledListItem>
 			</StyledNameAndColor>
-			<img src='/assets/images/icon-chevron.svg' alt='' />
+			<StyledChevron src='/assets/images/icon-chevron.svg' alt='' />
 		</StyledDivLi>
 	);
 };

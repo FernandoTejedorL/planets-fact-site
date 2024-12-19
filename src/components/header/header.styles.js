@@ -13,6 +13,16 @@ const StyledHeader = styled.div`
 	justify-content: space-between;
 	padding: 1rem 1.5rem;
 	border-bottom: 0.0625rem solid ${COLORS.transparentWhite};
+
+	@media screen and (width>=768px) {
+		flex-direction: column;
+		align-items: center;
+		gap: 2.4375rem;
+	}
+
+	@media screen and (width>=1024px) {
+		flex-direction: row;
+	}
 `;
 
 const StyledLogo = styled.h1`

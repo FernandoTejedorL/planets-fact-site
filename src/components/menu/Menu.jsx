@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import { PLANETS_INFO } from '../../constants/planets-info';
 import ListItem from '../listItem/ListItem';
-import { StyledListItemContainer, StyledMenu } from './menu.styles';
+import {
+	StyledHamburger,
+	StyledListItemContainer,
+	StyledMenu
+} from './menu.styles';
 
 const Menu = () => {
 	const [showMenu, setShowMenu] = useState(false);
@@ -14,7 +18,7 @@ const Menu = () => {
 					))}
 				</StyledListItemContainer>
 			</StyledMenu>
-			<img
+			<StyledHamburger
 				onClick={() => setShowMenu(!showMenu)}
 				src='/assets/images/icon-hamburger.svg'
 				alt='hamburgericon'

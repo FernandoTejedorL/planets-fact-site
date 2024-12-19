@@ -10,6 +10,7 @@ import {
 	StyledDescription,
 	StyledDetailsContainer,
 	StyledLink,
+	StyledNumber,
 	StyledPlanetImg,
 	StyledPlanetInfo,
 	StyledPlanetName,
@@ -76,6 +77,7 @@ const Planet = ({ planetName }) => {
 				{viewShown === 'surface' && (
 					<StyledPlanetSecondary src={subimages} alt='' />
 				)}
+
 				<StyledToBig>
 					<StyledPlanetInfo>
 						<StyledPlanetName>{planet.name.toUpperCase()}</StyledPlanetName>
@@ -90,36 +92,43 @@ const Planet = ({ planetName }) => {
 						<StyledButton
 							$state={viewShown}
 							$active={'overview'}
-							$planetColor={planet.color}
+							$planetColor={planet.tabcolor}
 							onClick={() => setViewShown('overview')}
 						>
-							OVERVIEW
+							<span>
+								<StyledNumber>01</StyledNumber> OVERVIEW
+							</span>
 						</StyledButton>
 						<StyledButton
 							$state={viewShown}
 							$active={'structure'}
-							$planetColor={planet.color}
+							$planetColor={planet.tabcolor}
 							onClick={() => setViewShown('structure')}
 						>
-							STRUCTURE
+							<span>
+								{' '}
+								<StyledNumber>02</StyledNumber> INTERNAL STRUCTURE
+							</span>
 						</StyledButton>
 						<StyledButton
 							$state={viewShown}
 							$active={'surface'}
-							$planetColor={planet.color}
+							$planetColor={planet.tabcolor}
 							onClick={() => setViewShown('surface')}
 						>
-							SURFACE
+							<span>
+								<StyledNumber>03</StyledNumber> SURFACE GEOLOGY
+							</span>
 						</StyledButton>
 					</StyledButtonsContainerBig>
 				</StyledToBig>
-				<StyledCounterContainer>
-					<Counter topic={'ROTATION TIME'} magnitude={planet.rotation} />
-					<Counter topic={'REVOLUTION TIME'} magnitude={planet.revolution} />
-					<Counter topic={'RADIUS'} magnitude={planet.radius} />
-					<Counter topic={'AVERAGE TEMP.'} magnitude={planet.temperature} />
-				</StyledCounterContainer>
 			</StyledDetailsContainer>
+			<StyledCounterContainer>
+				<Counter topic={'ROTATION TIME'} magnitude={planet.rotation} />
+				<Counter topic={'REVOLUTION TIME'} magnitude={planet.revolution} />
+				<Counter topic={'RADIUS'} magnitude={planet.radius} />
+				<Counter topic={'AVERAGE TEMP.'} magnitude={planet.temperature} />
+			</StyledCounterContainer>
 		</>
 	);
 };

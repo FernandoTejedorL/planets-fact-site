@@ -56,16 +56,40 @@ const StyledButton = styled.button`
 		border-bottom: none;
 		color: ${COLORS.white};
 		opacity: 100%;
+		justify-content: flex-start;
+		padding-inline: 1.25rem;
+		border: 1px solid ${COLORS.transparentWhite};
+
+		@media (hover: hover) {
+			&:hover {
+				background-color: ${COLORS.transparentWhite};
+			}
+		}
 	}
+
+	@media screen and (width>=1024px) {
+		width: 21.875rem;
+	}
+`;
+
+const StyledNumber = styled.span`
+	opacity: 50%;
 `;
 
 const StyledToBig = styled.div`
 	@media screen and (width>=768px) {
 		display: flex;
-		min-width: 46.875rem;
+		flex-direction: row;
+		width: 46.875rem;
 		padding-inline: 2.4375rem;
 		justify-content: space-between;
 		align-items: center;
+	}
+
+	@media screen and (width>=1024px) {
+		flex-direction: column;
+		align-items: center;
+		gap: 2.4375rem;
 	}
 `;
 
@@ -77,6 +101,12 @@ const StyledDetailsContainer = styled.div`
 	gap: 2rem;
 	text-align: center;
 	padding: 5.9375rem 1.5rem 2.9375rem 1.5rem;
+
+	@media screen and (width>=1024px) {
+		flex-direction: row;
+		justify-content: center;
+		margin-left: 34px;
+	}
 `;
 
 const StyledPlanetImg = styled.img`
@@ -97,9 +127,17 @@ const StyledPlanetImg = styled.img`
 
 const StyledPlanetSecondary = styled.img`
 	position: absolute;
-	top: 10.625rem;
+	top: 270px;
 	height: 5.0625rem;
 	width: 4.375rem;
+
+	@media screen and (width>=768px) {
+		top: 400px;
+	}
+
+	@media screen and (width>=1024px) {
+		left: 200px;
+	}
 `;
 
 const StyledPlanetInfo = styled.div`
@@ -111,12 +149,19 @@ const StyledPlanetInfo = styled.div`
 	@media screen and (width>=768px) {
 		align-items: flex-start;
 	}
+
+	@media screen and (width>=1024px) {
+	}
 `;
 
 const StyledPlanetName = styled.span`
 	font-family: ${FONT_FAMILY.antonio};
 	font-size: ${FONT_SIZE.l};
 	font-weight: ${FONT_WEIGHT.medium};
+
+	@media screen and (width>=1024px) {
+		font-size: ${FONT_SIZE.xl};
+	}
 `;
 
 const StyledDescription = styled.span`
@@ -127,6 +172,10 @@ const StyledDescription = styled.span`
 
 	@media screen and (width>=768px) {
 		text-align: left;
+	}
+
+	@media screen and (with>=1024px) {
+		font-size: ${FONT_SIZE.l};
 	}
 `;
 
@@ -155,9 +204,11 @@ const StyledCounterContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+	margin: 2.125rem;
 
 	@media screen and (width>=768px) {
 		flex-direction: row;
+		justify-content: center;
 	}
 `;
 
@@ -175,5 +226,6 @@ export {
 	StyledLink,
 	StyledCounterContainer,
 	StyledButtonsContainerBig,
-	StyledToBig
+	StyledToBig,
+	StyledNumber
 };

@@ -13,13 +13,17 @@ const StyledMenu = styled.nav`
 	background-color: ${COLORS.dark};
 	z-index: 1;
 
-	/* @media screen and (width>=768px) {
+	@media screen and (width>=768px) {
 		position: relative;
 		top: 0;
 		display: flex;
 		flex-direction: row;
 		height: 50px;
-	} */
+	}
+
+	@media screen and (width>=1024px) {
+		right: 34px;
+	}
 `;
 
 const StyledListItemContainer = styled.ul`
@@ -32,7 +36,23 @@ const StyledListItemContainer = styled.ul`
 
 	@media screen and (width>=768px) {
 		border-bottom: none;
+		flex-direction: row;
+		width: 100%;
+	}
+
+	@media screen and (width>=1024px) {
+		justify-content: flex-end;
+		gap: 24px;
+		width: 41.5625rem;
+		position: absolute;
+		left: 34px;
 	}
 `;
 
-export { StyledMenu, StyledListItemContainer };
+const StyledHamburger = styled.img`
+	@media screen and (width>=768px) {
+		display: none;
+	}
+`;
+
+export { StyledMenu, StyledListItemContainer, StyledHamburger };

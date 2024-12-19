@@ -29,7 +29,9 @@ const StyledButton = styled.button`
 	background-color: transparent;
 	border: none;
 	opacity: 50%;
-	border-bottom: 0.25rem solid white;
+	border-bottom: 4px solid
+		${({ $state, $active, $planetColor }) =>
+			$state === $active ? $planetColor : 'transparent'};
 `;
 
 const StyledDetailsContainer = styled.div`

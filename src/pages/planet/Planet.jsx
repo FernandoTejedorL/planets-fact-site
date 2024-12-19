@@ -44,13 +44,28 @@ const Planet = ({ planetName }) => {
 		<>
 			<Header />
 			<StyledButtonsContainer>
-				<StyledButton onClick={() => setViewShown('overview')}>
+				<StyledButton
+					$state={viewShown}
+					$active={'overview'}
+					$planetColor={planet.color}
+					onClick={() => setViewShown('overview')}
+				>
 					OVERVIEW
 				</StyledButton>
-				<StyledButton onClick={() => setViewShown('structure')}>
+				<StyledButton
+					$state={viewShown}
+					$active={'structure'}
+					$planetColor={planet.color}
+					onClick={() => setViewShown('structure')}
+				>
 					STRUCTURE
 				</StyledButton>
-				<StyledButton onClick={() => setViewShown('surface')}>
+				<StyledButton
+					$state={viewShown}
+					$active={'surface'}
+					$planetColor={planet.color}
+					onClick={() => setViewShown('surface')}
+				>
 					SURFACE
 				</StyledButton>
 			</StyledButtonsContainer>

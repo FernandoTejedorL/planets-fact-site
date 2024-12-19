@@ -15,6 +15,22 @@ const StyledCounter = styled.div`
 	height: 3rem;
 	min-width: 20.4375rem;
 	border: 0.0625rem solid ${COLORS.transparentWhite};
+
+	@media screen and (width>=768px) {
+		height: 5.5rem;
+		min-width: 10.25rem;
+		padding: 1rem 0.9375rem;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	@media screen and (width>=1024px) {
+		height: 8rem;
+		min-width: 15.9375rem;
+		padding: 1rem 0.9375rem;
+		flex-direction: column;
+		align-items: flex-start;
+	}
 `;
 
 const StyledTopic = styled.span`
@@ -30,6 +46,14 @@ const StyledMagnitude = styled.span`
 	font-weight: ${FONT_WEIGHT.medium};
 	font-size: 1.25rem;
 	letter-spacing: ${LETTER_SPACING.s};
+
+	@media screen and (width>=768px) {
+		font-size: 1.5rem;
+	}
+
+	@media screen and (width>=1024x) {
+		font-size: ${FONT_SIZE.l};
+	}
 `;
 
 export { StyledCounter, StyledTopic, StyledMagnitude };

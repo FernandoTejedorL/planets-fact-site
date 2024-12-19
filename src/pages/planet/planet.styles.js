@@ -14,6 +14,21 @@ const StyledButtonsContainer = styled.div`
 	justify-content: space-around;
 	height: 3.125rem;
 	border-bottom: 1px solid ${COLORS.transparentWhite};
+
+	@media screen and (width>=768px) {
+		display: none;
+	}
+`;
+
+const StyledButtonsContainerBig = styled.div`
+	display: none;
+	@media screen and (width>=768px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		gap: 1rem;
+	}
 `;
 
 const StyledButton = styled.button`
@@ -32,6 +47,26 @@ const StyledButton = styled.button`
 	border-bottom: 4px solid
 		${({ $state, $active, $planetColor }) =>
 			$state === $active ? $planetColor : 'transparent'};
+
+	@media screen and (width>=768px) {
+		width: 17.5625rem;
+		height: 2.5rem;
+		background-color: ${({ $state, $active, $planetColor }) =>
+			$state === $active ? $planetColor : 'transparent'};
+		border-bottom: none;
+		color: ${COLORS.white};
+		opacity: 100%;
+	}
+`;
+
+const StyledToBig = styled.div`
+	@media screen and (width>=768px) {
+		display: flex;
+		min-width: 46.875rem;
+		padding-inline: 2.4375rem;
+		justify-content: space-between;
+		align-items: center;
+	}
 `;
 
 const StyledDetailsContainer = styled.div`
@@ -45,9 +80,19 @@ const StyledDetailsContainer = styled.div`
 `;
 
 const StyledPlanetImg = styled.img`
-	height: 6.9375rem;
-	width: 6.9375rem;
+	height: ${({ $size }) => $size.s};
+	width: ${({ $size }) => $size.s};
 	margin-bottom: 3.5rem;
+
+	@media screen and (width>=768px) {
+		height: ${({ $size }) => $size.m};
+		width: ${({ $size }) => $size.m};
+	}
+
+	@media screen and (width>=1024px) {
+		height: ${({ $size }) => $size.l};
+		width: ${({ $size }) => $size.l};
+	}
 `;
 
 const StyledPlanetSecondary = styled.img`
@@ -62,6 +107,10 @@ const StyledPlanetInfo = styled.div`
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
+
+	@media screen and (width>=768px) {
+		align-items: flex-start;
+	}
 `;
 
 const StyledPlanetName = styled.span`
@@ -75,6 +124,10 @@ const StyledDescription = styled.span`
 	line-height: ${LINE_HEIGHT.s};
 	font-weight: ${FONT_WEIGHT.regular};
 	width: 20.4375rem;
+
+	@media screen and (width>=768px) {
+		text-align: left;
+	}
 `;
 
 const StiledSourceDiv = styled.div`
@@ -102,6 +155,10 @@ const StyledCounterContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+
+	@media screen and (width>=768px) {
+		flex-direction: row;
+	}
 `;
 
 export {
@@ -116,5 +173,7 @@ export {
 	StiledSourceDiv,
 	StyledSource,
 	StyledLink,
-	StyledCounterContainer
+	StyledCounterContainer,
+	StyledButtonsContainerBig,
+	StyledToBig
 };

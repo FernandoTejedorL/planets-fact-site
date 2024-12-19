@@ -27,6 +27,11 @@ export const PLANETS_INFO = [
 			planet: '/assets/images/planet-mercury.svg',
 			internal: '/assets/images/planet-mercury-internal.svg',
 			geology: '/assets/images/geology-mercury.png'
+		},
+		size: {
+			s: '6.9375rem',
+			m: '11.5rem',
+			l: '18.125rem'
 		}
 	},
 	{
@@ -51,6 +56,11 @@ export const PLANETS_INFO = [
 			planet: '/assets/images/planet-venus.svg',
 			internal: '/assets/images/planet-venus-internal.svg',
 			geology: '/assets/images/geology-venus.png'
+		},
+		size: {
+			s: '9.625rem',
+			m: '15.8125rem',
+			l: '25rem'
 		}
 	},
 	{
@@ -74,6 +84,11 @@ export const PLANETS_INFO = [
 			planet: '/assets/images/planet-earth.svg',
 			internal: '/assets/images/planet-earth-internal.svg',
 			geology: '/assets/images/geology-earth.png'
+		},
+		size: {
+			s: '10.8125rem',
+			m: '17.8125rem',
+			l: '28.125rem'
 		}
 	},
 	{
@@ -97,6 +112,11 @@ export const PLANETS_INFO = [
 			planet: '/assets/images/planet-mars.svg',
 			internal: '/assets/images/planet-mars-internal.svg',
 			geology: '/assets/images/geology-mars.png'
+		},
+		size: {
+			s: '8.0625rem',
+			m: '13.3125rem',
+			l: '21rem'
 		}
 	},
 	{
@@ -121,6 +141,11 @@ export const PLANETS_INFO = [
 			planet: '/assets/images/planet-jupiter.svg',
 			internal: '/assets/images/planet-jupiter-internal.svg',
 			geology: '/assets/images/geology-jupiter.png'
+		},
+		size: {
+			s: '14rem',
+			m: '23.0625rem',
+			l: '36.375rem'
 		}
 	},
 	{
@@ -144,6 +169,11 @@ export const PLANETS_INFO = [
 			planet: '/assets/images/planet-saturn.svg',
 			internal: '/assets/images/planet-saturn-internal.svg',
 			geology: '/assets/images/geology-saturn.png'
+		},
+		size: {
+			s: '16rem',
+			m: '26.375rem',
+			l: '41.625rem'
 		}
 	},
 	{
@@ -167,6 +197,11 @@ export const PLANETS_INFO = [
 			planet: '/assets/images/planet-uranus.svg',
 			internal: '/assets/images/planet-uranus-internal.svg',
 			geology: '/assets/images/geology-uranus.png'
+		},
+		size: {
+			s: '11rem',
+			m: '18.125rem',
+			l: '28.625rem'
 		}
 	},
 	{
@@ -190,6 +225,11 @@ export const PLANETS_INFO = [
 			planet: '/assets/images/planet-neptune.svg',
 			internal: '/assets/images/planet-neptune-internal.svg',
 			geology: '/assets/images/geology-neptune.png'
+		},
+		size: {
+			s: '10.8125rem',
+			m: '17.8125rem',
+			l: '28.125rem'
 		}
 	}
 ];

@@ -27,7 +27,7 @@ const StyledCounter = styled.div`
 	@media screen and (width>=1024px) {
 		height: 8rem;
 		min-width: 15.9375rem;
-		padding: 1rem 0.9375rem;
+		padding: 27px 0.9375rem;
 		flex-direction: column;
 		align-items: flex-start;
 	}

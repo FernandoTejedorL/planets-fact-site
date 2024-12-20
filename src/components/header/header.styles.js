@@ -6,7 +6,6 @@ import {
 	LETTER_SPACING
 } from '../../styles/fonts';
 import { COLORS } from '../../styles/colors';
-import { Link } from 'react-router-dom';
 
 const StyledHeader = styled.div`
 	display: flex;

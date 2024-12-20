@@ -22,7 +22,8 @@ const StyledMenu = styled.nav`
 	}
 
 	@media screen and (width>=1024px) {
-		right: 34px;
+		justify-content: flex-end;
+		width: 70%;
 	}
 `;
 
@@ -44,8 +45,6 @@ const StyledListItemContainer = styled.ul`
 		justify-content: flex-end;
 		gap: 24px;
 		width: 41.5625rem;
-		position: absolute;
-		left: 34px;
 	}
 `;
 

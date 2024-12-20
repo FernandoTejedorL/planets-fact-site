@@ -9,6 +9,7 @@ import {
 	StyledCounterContainer,
 	StyledDescription,
 	StyledDetailsContainer,
+	StyledImageContainer,
 	StyledLink,
 	StyledNumber,
 	StyledPlanetImg,
@@ -16,7 +17,8 @@ import {
 	StyledPlanetName,
 	StyledPlanetSecondary,
 	StyledSource,
-	StyledToBig
+	StyledToBig,
+	StyledToCenter
 } from './planet.styles';
 import Header from '../../components/header/Header';
 
@@ -72,57 +74,61 @@ const Planet = ({ planetName }) => {
 					SURFACE
 				</StyledButton>
 			</StyledButtonsContainer>
-			<StyledDetailsContainer>
-				<StyledPlanetImg $size={planet.size} src={images} alt='' />
-				{viewShown === 'surface' && (
-					<StyledPlanetSecondary src={subimages} alt='' />
-				)}
+			<StyledToCenter>
+				<StyledDetailsContainer>
+					<StyledImageContainer>
+						<StyledPlanetImg $size={planet.size} src={images} alt='' />
+						{viewShown === 'surface' && (
+							<StyledPlanetSecondary src={subimages} alt='' />
+						)}
+					</StyledImageContainer>
 
-				<StyledToBig>
-					<StyledPlanetInfo>
-						<StyledPlanetName>{planet.name.toUpperCase()}</StyledPlanetName>
-						<StyledDescription>{description}</StyledDescription>
-						<StiledSourceDiv>
-							<StyledSource>Source :</StyledSource>
-							<StyledLink href={source}>Wikipedia</StyledLink>
-							<img src='/assets/images/icon-source.svg' alt='' />
-						</StiledSourceDiv>
-					</StyledPlanetInfo>
-					<StyledButtonsContainerBig>
-						<StyledButton
-							$state={viewShown}
-							$active={'overview'}
-							$planetColor={planet.tabcolor}
-							onClick={() => setViewShown('overview')}
-						>
-							<span>
-								<StyledNumber>01</StyledNumber> OVERVIEW
-							</span>
-						</StyledButton>
-						<StyledButton
-							$state={viewShown}
-							$active={'structure'}
-							$planetColor={planet.tabcolor}
-							onClick={() => setViewShown('structure')}
-						>
-							<span>
-								{' '}
-								<StyledNumber>02</StyledNumber> INTERNAL STRUCTURE
-							</span>
-						</StyledButton>
-						<StyledButton
-							$state={viewShown}
-							$active={'surface'}
-							$planetColor={planet.tabcolor}
-							onClick={() => setViewShown('surface')}
-						>
-							<span>
-								<StyledNumber>03</StyledNumber> SURFACE GEOLOGY
-							</span>
-						</StyledButton>
-					</StyledButtonsContainerBig>
-				</StyledToBig>
-			</StyledDetailsContainer>
+					<StyledToBig>
+						<StyledPlanetInfo>
+							<StyledPlanetName>{planet.name.toUpperCase()}</StyledPlanetName>
+							<StyledDescription>{description}</StyledDescription>
+							<StiledSourceDiv>
+								<StyledSource>Source :</StyledSource>
+								<StyledLink href={source}>Wikipedia</StyledLink>
+								<img src='/assets/images/icon-source.svg' alt='' />
+							</StiledSourceDiv>
+						</StyledPlanetInfo>
+						<StyledButtonsContainerBig>
+							<StyledButton
+								$state={viewShown}
+								$active={'overview'}
+								$planetColor={planet.tabcolor}
+								onClick={() => setViewShown('overview')}
+							>
+								<span>
+									<StyledNumber>01</StyledNumber> OVERVIEW
+								</span>
+							</StyledButton>
+							<StyledButton
+								$state={viewShown}
+								$active={'structure'}
+								$planetColor={planet.tabcolor}
+								onClick={() => setViewShown('structure')}
+							>
+								<span>
+									{' '}
+									<StyledNumber>02</StyledNumber> INTERNAL STRUCTURE
+								</span>
+							</StyledButton>
+							<StyledButton
+								$state={viewShown}
+								$active={'surface'}
+								$planetColor={planet.tabcolor}
+								onClick={() => setViewShown('surface')}
+							>
+								<span>
+									<StyledNumber>03</StyledNumber> SURFACE GEOLOGY
+								</span>
+							</StyledButton>
+						</StyledButtonsContainerBig>
+					</StyledToBig>
+				</StyledDetailsContainer>
+			</StyledToCenter>
 			<StyledCounterContainer>
 				<Counter topic={'ROTATION TIME'} magnitude={planet.rotation} />
 				<Counter topic={'REVOLUTION TIME'} magnitude={planet.revolution} />

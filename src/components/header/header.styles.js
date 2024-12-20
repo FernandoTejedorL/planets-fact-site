@@ -6,6 +6,7 @@ import {
 	LETTER_SPACING
 } from '../../styles/fonts';
 import { COLORS } from '../../styles/colors';
+import { Link } from 'react-router-dom';
 
 const StyledHeader = styled.div`
 	display: flex;
@@ -22,6 +23,7 @@ const StyledHeader = styled.div`
 
 	@media screen and (width>=1024px) {
 		flex-direction: row;
+		justify-content: space-between;
 	}
 `;
 

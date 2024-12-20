@@ -80,8 +80,8 @@ const StyledToBig = styled.div`
 	@media screen and (width>=768px) {
 		display: flex;
 		flex-direction: row;
-		width: 46.875rem;
 		padding-inline: 2.4375rem;
+		gap: 4.3125rem;
 		justify-content: space-between;
 		align-items: center;
 	}
@@ -91,6 +91,12 @@ const StyledToBig = styled.div`
 		align-items: center;
 		gap: 2.4375rem;
 	}
+`;
+
+const StyledToCenter = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
 `;
 
 const StyledDetailsContainer = styled.div`
@@ -103,10 +109,18 @@ const StyledDetailsContainer = styled.div`
 	padding: 5.9375rem 1.5rem 2.9375rem 1.5rem;
 
 	@media screen and (width>=1024px) {
+		width: 90vw;
 		flex-direction: row;
-		justify-content: center;
-		margin-left: 34px;
+		justify-content: space-evenly;
 	}
+`;
+
+const StyledImageContainer = styled.div`
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 `;
 
 const StyledPlanetImg = styled.img`
@@ -127,17 +141,9 @@ const StyledPlanetImg = styled.img`
 
 const StyledPlanetSecondary = styled.img`
 	position: absolute;
-	top: 270px;
+	top: 50%;
 	height: 5.0625rem;
 	width: 4.375rem;
-
-	@media screen and (width>=768px) {
-		top: 400px;
-	}
-
-	@media screen and (width>=1024px) {
-		left: 200px;
-	}
 `;
 
 const StyledPlanetInfo = styled.div`
@@ -227,5 +233,7 @@ export {
 	StyledCounterContainer,
 	StyledButtonsContainerBig,
 	StyledToBig,
-	StyledNumber
+	StyledNumber,
+	StyledImageContainer,
+	StyledToCenter
 };

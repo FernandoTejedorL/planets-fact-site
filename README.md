@@ -1,30 +1,32 @@
-# Game Shop
+# Planects Facts
 
 <p>
-    <img src="" alt="home">
+    <img src="https://raw.githubusercontent.com/FernandoTejedorL/planets-fact-site/refs/heads/main/design/home.jpg" alt="home">
 </p>
 
 ## Live view
 
 <ul>
     <li>
-        <a target="_blank" href="">Game Shop</a>
+        <a target="_blank" href="https://planets-fact-site-awbm.onrender.com">Planets Facts</a>
     </li>
 </ul>
 
 ## Description 📑
 
-Game Shop is the best place to find the new videogames releases for any of the best plattforms!!
+Planets Facts is a fun and interactive way to explore our solar system and discover fascinating facts about each planet! 🌍
 
 ✨ <b>Features</b>
 </br>
-🛍 Buy the newest videogames in the market!.
+🪐 Explore the different planets.
 </br>
-🔍 Advanced Search – Filter games by platform and get platform suggestions when purchasing a new game
+🧱 Learn about the internal structure of each planet.
+</br>
+📊 Discover key data such as orbital speed, size, and more.
 
-## 🚀 What I Learned from Building Dusty Bunny
+## 🚀 What I Learned from Building Planets Facts
 
-Throughout this project, I gained hands-on experience in developing and deploying a full-stack application to production using Render.
+This project gave me hands-on experience building a React web app and marked my first implementation of React Router.
 
 During the development process, I worked with:
 
@@ -36,11 +38,11 @@ During the development process, I worked with:
         React for the frontend, styled with Styled Components to keep designs modular and dynamic, always based on a mobile-first philosophy while ensuring a fully responsive build.
     </li>
     <li>
-        Implemented React Context to manage and share global state across the application
+        First-time implementation of React Router to manage client-side routing and improve the user experience.
     </li>
 </ul>
 
-From concept to deployment, Game Shop is my first complete e-commerce project, where I learned to manage app-wide data flow and improve user experience through search and filtering features. 🚀✨
+From concept to deployment, Planets Facts was a milestone for me as it taught me how to integrate navigation with React Router and optimize the performance and structure of a multi-page React app. 🚀✨
 
 ## Technologies 🛠
 
@@ -80,7 +82,10 @@ From concept to deployment, Game Shop is my first complete e-commerce project, w
 ## Capturas del proyecto
 
 <p>
-   <img src="" alt="home">
+   <img src="https://raw.githubusercontent.com/FernandoTejedorL/planets-fact-site/refs/heads/main/design/home.jpg" alt="home">
+   <img src="https://raw.githubusercontent.com/FernandoTejedorL/planets-fact-site/refs/heads/main/design/view.jpg" alt="general view">
+   <img src="https://raw.githubusercontent.com/FernandoTejedorL/planets-fact-site/refs/heads/main/design/tablet.jpg" alt="tablet view">
+   <img src="https://raw.githubusercontent.com/FernandoTejedorL/planets-fact-site/refs/heads/main/design/menu.jpg" alt="menu">
 </p>
 
 ## Author ✒️

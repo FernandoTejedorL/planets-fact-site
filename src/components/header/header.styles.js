@@ -26,6 +26,7 @@ const StyledHeader = styled.div`
 	}
 `;
 
+
 const StyledLogo = styled.h1`
 	font-family: ${FONT_FAMILY.antonio};
 	font-weight: ${FONT_WEIGHT.medium};
